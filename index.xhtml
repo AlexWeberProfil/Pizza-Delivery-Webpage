@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width"/>
+<meta name="author" content="Alex Weber"/>
+<title>Übung - Formularen</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header>
+<h1>Luigi's Pizza</h1>
+<figure>
+<img src="./images/pizza.png" alt="pizza" />
+</figure>
+</header>
+<form id="order" method="post" action="bestellung.xhtml" enctype="text/plain">
+<div id="bestellung">
+<fieldset>
+<legend> Bestellung </legend>
+<label for="anzahlDerPizzen"> Anzahl der Pizzen: </label>
+<select id="anzahlDerPizzen" name="anzahlDerPizzen" autofocus="autofocus">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+<option value="11"> 11 </option>
+<option value="12"> 12 </option>
+<option value="13"> 13 </option>
+<option value="14"> 14 </option>
+<option value="15"> 15 </option>
+</select>
+<br/>
+<label for="pizzaGroesse"> Pizza Größe: </label>
+<select id="pizzaGroesse" name="pizzaGroesse">
+<option value="klein"> Klein </option>
+<option value="mittel"> Mittel </option>
+<option value="gross"> Groß </option>
+</select>
+<br/>
+<fieldset>
+<legend> Wunschzutaten </legend>
+<input id="basilikum" name="basilikum" value="basilikum" type="checkbox"/>
+<label class="wunschzutaten" for="basilikum"> Basilikum </label>
+<input id="bohnen" name="bohnen" value="bohnen" type="checkbox"/>
+<label class="wunschzutaten" for="bohnen"> Bohnen </label>
+<input id="knoblauch" name="knoblauch" value="knoblauch" type="checkbox"/>
+<label class="wunschzutaten" for="knoblauch"> Knoblauch </label>
+<input id="mais" name="mais" value="mais" type="checkbox"/>
+<label class="wunschzutaten" for="mais"> Mais </label>
+<input id="pfefferoni" name="pfefferoni" value="pfefferoni" type="checkbox"/>
+<label class="wunschzutaten" for="pfefferoni"> Pfefferoni </label>
+<input id="tomatenscheiben" name="tomatenscheiben" value="tomatenscheiben" type="checkbox"/>
+<label class="wunschzutaten" for="tomatenscheiben"> Tomatenscheiben </label>
+</fieldset>
+<br/>
+<textarea id="weitereAnmerkungen" name="weitereAnmerkungen" cols="50" rows="12" placeholder="Weitere Anmerkungen"></textarea>
+<br/>
+</fieldset>
+</div>
+<div id="Lieferadresse">
+<fieldset>
+<legend> Lieferadresse </legend>
+<label class="lieferung" for="anrede"> Anrede: </label>
+<select id="anrede" name="anrede">
+<option value="herr"> Herr </option>
+<option value="frau"> Frau </option>
+</select>
+<br/>
+<label class="lieferung" for="vorname"> Vorname: </label>
+<input id="vorname" name="vorname" type="text"/>
+<br/>
+<label class="lieferung" for="nachname"> Nachname: </label>
+<input id="nachname" name="nachname" type="text"/>
+<br/>
+<label class="lieferung" for="adresse"> Adresse: </label>
+<input id="adresse" name="adresse" placeholder="Strasse, Haus Nr." type="text"/>
+<br/>
+<label class="lieferung" for="plz"> PLZ: </label>
+<input id="plz" name="plz" maxlength="5" size="5" type="text"/>
+<br/>
+<label class="lieferung" for="ort"> Ort: </label>
+<input id="ort" name="ort" type="text"/>
+<br/>
+<label class="lieferung" for="telefon"> Telefon: </label>
+<input id="telefon" name="telefon" type="text"/>
+<br/>
+<label class="lieferung" for="email"> E-Mail: </label>
+<input id="email" name="email" type="text"/>
+<br/>
+</fieldset>
+</div>
+<div id="zahlung">
+<fieldset>
+<legend> Zahlung </legend>
+<label class="zahlung" for="kreditkartentyp"> Kreditkartentyp: </label>
+<select id="kreditkartentyp" name="kreditkartentyp">
+<option value="visa"> Visa </option>
+<option value="mastercard"> Mastercard </option>
+<option value="americanExpress"> American Express </option>
+</select>
+<br/>
+<label class="zahlung" for="kreditkarteninhaber"> Kreditkarteninhaber: </label>
+<input id="kreditkarteninhaber" name="kreditkarteninhaber" type="text"/>
+<br/>
+<label class="zahlung" for="kreditkartennummer"> Kreditkartennummer: </label>
+<input id="kreditkartennummer" name="kreditkartennummer" maxlength="16" type="text"/>
+<br/>
+<label class="zahlung" for="sicherheitsnummer"> PIN: </label>
+<input id="sicherheitsnummer" name="sicherheitsnummer" maxlength="3" size="3" type="text"/>
+<br/>
+</fieldset>
+</div>
+<input id="agb" name="agb" value="agb" type="checkbox"/>
+<label for="agb"> Ich akzeptiere die AGB! </label>
+<br/>
+<input id="submitBestellung" value="Bestellen!" type="submit"/>
+</form>
+<footer>Erstellt von Alex Weber</footer>
+</body>
+</html>
